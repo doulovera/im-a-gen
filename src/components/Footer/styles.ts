@@ -11,6 +11,7 @@ export const DivContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
+  margin: 0 auto;
   padding: 15px 50px;
 
   min-width: 300px;
