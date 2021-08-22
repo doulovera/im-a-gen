@@ -8,9 +8,10 @@ export const Section = styled.section`
   text-align: center;
 `;
 
-export const ImgContainer = styled.div`
+export const ImgContainer = styled.a`
   position: relative;
-  padding: 20px 0;
+  display: block;
+  padding: 20px;
   background-color: var(--bg-secondary);
   border-radius: 15px;
   transition: 0.3s ease-in-out;
@@ -18,13 +19,10 @@ export const ImgContainer = styled.div`
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 
   &:hover,
-  &:hover > a {
+  &:hover > span {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
       rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  }
-  &:hover > a {
-    background-color: var(--blue-primary);
   }
 `;
 
@@ -33,17 +31,13 @@ export const Img = styled.img`
   height: auto;
 `;
 
-export const Download = styled.a`
+export const Download = styled.span`
   position: absolute;
   left: calc(50% - 86px);
   bottom: -25px;
-
   padding: 10px 15px;
-
-  background-color: var(--blue-secondary);
-
+  background-color: var(--blue-primary);
   border-radius: var(--input-border-radius);
-
   font-size: 1rem;
   color: #fff;
   text-decoration: none !important;

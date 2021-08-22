@@ -15,13 +15,13 @@ export default function Result({ imageUrl, warning, handleWarning }: Props) {
       )}
 
       {imageUrl && (
-        <ImgContainer>
+        <ImgContainer href={imageUrl} target="_blank" rel="noreferrer">
           <Img
             src={imageUrl}
             onError={() => handleWarning("Image not found. Try again 😬")}
             alt="Generated from Picsum"
           />
-          <Download href={imageUrl} target="_blank" rel="noreferrer">
+          <Download>
             Download image <i className="external-icon"></i>
           </Download>
         </ImgContainer>
